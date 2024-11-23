@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<body>
+
+    <img src = "nw.png" id="img">
+    <button id="NextBtn"> Next </button>
+    <button id="prevBtn"> Preveious </button>
+
+    <span id="dot"></span>
+    <span></span>
+
+
+    <script>
+        var img = document.getElementById("img");
+    var imges =["nw.png","ofTwo.jpg","on.png","s.jpg"];
+    var NextBtn =document.getElementById("NextBtn");
+    var prevBtn =document.getElementById("prevBtn");
+
+
+
+    var count = 0;
+    NextBtn.addEventListener("click",function(){
+        count++;
+        if(count >= imges.length){
+            count = 0
+ 
+        }
+        img.src=imges[count];
+    })
+
+    prevBtn.addEventListener("click",function(){
+        count--;
+       if(count < 0){
+
+        count =3;
+
+       }
+        img.src=imges[count];
+    })
+
+    
+
+    </script>
+</body>
+</html>

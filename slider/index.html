@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Slider</title>
+</head>
+<body>
+
+   <img src ="nw.png" id ="img">
+
+   <script>
+   
+
+   var img = document.getElementById("img");
+   var imgs = ["nw.png","ofTwo.jpg","on.png","s.jpg"];
+   var count = 0;
+
+   setInterval(slider,700);
+   function slider(){
+    count++;
+    if(count >= imgs.length){
+         count= 0;
+    }
+    img.src=imgs[count];
+   }
+   </script>
+
+</body>
+</html>
